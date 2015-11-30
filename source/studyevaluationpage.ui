@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudyEvaluationPage</class>
+ <widget class="QWidget" name="StudyEvaluationPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="gB_studyDesign">
+     <property name="title">
+      <string>Study design</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="2" column="0">
+       <widget class="QLabel" name="l_p0">
+        <property name="text">
+         <string>p0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="l_p1">
+        <property name="text">
+         <string>p1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QLabel" name="l_desgintype">
+        <property name="text">
+         <string>Designtype</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QLabel" name="l_admissible">
+        <property name="text">
+         <string>Admissible</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="l_r1n1">
+        <property name="text">
+         <string>r1/n1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="14" column="0">
+       <widget class="QLabel" name="l_admissRange">
+        <property name="text">
+         <string>Admissible range</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="3">
+       <widget class="QLabel" name="l_petp0">
+        <property name="text">
+         <string>PET(p0)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QLabel" name="l_beta">
+        <property name="text">
+         <string>beta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="l_rn">
+        <property name="text">
+         <string>r/n</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" rowspan="2" colspan="3">
+       <widget class="QLabel" name="l_alpha">
+        <property name="text">
+         <string>alpha</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" rowspan="2" colspan="3">
+       <widget class="QLabel" name="l_enp0">
+        <property name="text">
+         <string>EN(p0)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="l_pt0">
+        <property name="text">
+         <string>pt0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="l_pt1">
+        <property name="text">
+         <string>pt1</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="gB_finalState">
+     <property name="title">
+      <string>Final study state</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="1">
+       <widget class="QLabel" name="l_enrolledPat">
+        <property name="text">
+         <string>Enrolled patients</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="l_responses_ep2">
+        <property name="text">
+         <string>Responses Endpoint two</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLabel" name="l_pValue">
+        <property name="text">
+         <string>P-value</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="l_responses">
+        <property name="text">
+         <string>Responses</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QGroupBox" name="gB_estimated">
+        <property name="title">
+         <string>Estimated response rate</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="1" column="0">
+          <widget class="QLabel" name="l_ml_ep2">
+           <property name="text">
+            <string>ML_ep2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="l_ci">
+           <property name="text">
+            <string>Convidence intervall</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="l_umvue">
+           <property name="text">
+            <string>UMVUE</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="l_ml">
+           <property name="text">
+            <string>ML</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="l_umvue_ep2">
+           <property name="text">
+            <string>UMVUE_ep2</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLabel" name="l_ce_flex">
+        <property name="text">
+         <string>CE</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" rowspan="3">
+    <widget class="QGroupBox" name="gB_GraficalOverview">
+     <property name="title">
+      <string>Grafical overview</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="Rwidget" name="w_graph" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="2" rowspan="3">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Rwidget</class>
+   <extends>QWidget</extends>
+   <header location="global">rwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

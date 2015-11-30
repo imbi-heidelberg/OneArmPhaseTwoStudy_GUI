@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1031</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OneArmPhaseTwoStudy_GUI</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="NewStudyFirstPage" name="w_newSturyFirstPage" native="true"/>
+    </item>
+    <item>
+     <widget class="DesignPage" name="w_SolutionStrategie" native="true"/>
+    </item>
+    <item>
+     <widget class="NewStudyOverviewPage" name="w_Overview" native="true"/>
+    </item>
+    <item>
+     <widget class="StudyProgressPage" name="w_studyProgress" native="true"/>
+    </item>
+    <item>
+     <widget class="StudyEvaluationPage" name="w_studyResults" native="true"/>
+    </item>
+    <item>
+     <widget class="QWidget" name="w_WindowBottom" native="true">
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="1" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pB_Next">
+         <property name="text">
+          <string>Next</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pB_Back">
+         <property name="text">
+          <string>Back</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1031</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionCreate_new_Study"/>
+    <addaction name="actionSave_Study"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionOpen_existing_Study"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuDatei"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionCreate_new_Study">
+   <property name="text">
+    <string>Create new study</string>
+   </property>
+  </action>
+  <action name="actionOpen_existing_Study">
+   <property name="text">
+    <string>Open existing study</string>
+   </property>
+  </action>
+  <action name="actionSave_Study">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionShow_Details">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Show Details</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>NewStudyFirstPage</class>
+   <extends>QWidget</extends>
+   <header location="global">newstudyfirstpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NewStudyOverviewPage</class>
+   <extends>QWidget</extends>
+   <header location="global">newstudyoverview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StudyProgressPage</class>
+   <extends>QWidget</extends>
+   <header location="global">studyprogresspage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StudyEvaluationPage</class>
+   <extends>QWidget</extends>
+   <header location="global">studyevaluationpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DesignPage</class>
+   <extends>QWidget</extends>
+   <header location="global">designpage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
