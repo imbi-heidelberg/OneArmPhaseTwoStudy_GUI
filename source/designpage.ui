@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DesignPage</class>
+ <widget class="QWidget" name="DesignPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1013</width>
+    <height>626</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="4" column="2" rowspan="11" colspan="3">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QTableWidget" name="t_results">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>r1 / n1</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>r / n</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>EN(p0)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>PET(p0)</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Alpha</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Beta</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Admissible range</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Type</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tab_Details">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_curtailment">
+         <attribute name="title">
+          <string>Curtailment details</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="t_ScDetails">
+            <column>
+             <property name="text">
+              <string>Cut</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>EN_SC(p0)</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>PET_SC(p0)</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Alpha</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Beta</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_flexible">
+         <attribute name="title">
+          <string>Flexible design details</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="gB_Flex_equally">
+            <property name="title">
+             <string>Equally</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="t_flexible_details_equally">
+               <column>
+                <property name="text">
+                 <string>Responses</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>CE</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>None</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="t_flexible_details_none">
+               <column>
+                <property name="text">
+                 <string>Responses</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>CE</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="gB_Flex_propor">
+            <property name="title">
+             <string>Proportionally</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="t_flexible_details_proportionally">
+               <column>
+                <property name="text">
+                 <string>Responses</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>CE</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QGroupBox" name="gB_Flex_Smallest">
+            <property name="title">
+             <string>Smallest</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="t_flexible_details_toOne">
+               <column>
+                <property name="text">
+                 <string>Responses</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>CE</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QWidget" name="w_Curtailment" native="true">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>140</height>
+      </size>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="2">
+       <widget class="QDoubleSpinBox" name="dsb_Curtailment">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximum">
+         <double>1.000000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QSpinBox" name="sb_NumRep">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximum">
+         <number>10000000</number>
+        </property>
+        <property name="value">
+         <number>10000</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QLabel" name="l_numberOfReplications">
+        <property name="text">
+         <string>Number of Replications</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="cB_curtailAll">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Curtail all</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="cB_Curtailment">
+        <property name="text">
+         <string>Curtailment</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Choose Optimization Criteria</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="rB_Minimax">
+        <property name="text">
+         <string>Minimax</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rB_Optimal">
+        <property name="text">
+         <string>Optimal</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rB_Admissible">
+        <property name="text">
+         <string>Admissible</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rB_All">
+        <property name="text">
+         <string>All</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QWidget" name="w_flexible_extention" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="cB_flexible">
+        <property name="text">
+         <string>Flexible Extention</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QGroupBox" name="gB_distribution_Type">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="title">
+         <string>Increase of CE</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QRadioButton" name="rb_none">
+           <property name="text">
+            <string>None</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="rb_proportionally">
+           <property name="text">
+            <string>Proportionally</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="rb_eually">
+           <property name="text">
+            <string>Equally</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="rb_smallest">
+           <property name="text">
+            <string>Smallest</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0">
+    <widget class="QGroupBox" name="gB_simon_para">
+     <property name="title">
+      <string>Design Parameters</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="0" column="0">
+       <widget class="QLabel" name="l_alpha">
+        <property name="text">
+         <string>Alpha:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QDoubleSpinBox" name="dsb_alpha">
+        <property name="decimals">
+         <number>2</number>
+        </property>
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="l_p0">
+        <property name="text">
+         <string>p0:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="dsb_p0">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="l_Beta">
+        <property name="text">
+         <string>Beta:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="l_MaxN">
+        <property name="text">
+         <string>Max N</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="l_p1">
+        <property name="text">
+         <string>p1:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="dsb_p1">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.300000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QDoubleSpinBox" name="dsb_beta">
+        <property name="minimum">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.050000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QSpinBox" name="sb_MaxN">
+        <property name="maximum">
+         <number>999</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QGroupBox" name="gB_sub1_para">
+     <property name="title">
+      <string>Design Parameters</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_11">
+      <item row="5" column="0">
+       <widget class="QSpinBox" name="sb_minN_sub1">
+        <property name="maximum">
+         <number>999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="l_MaxN_sub1">
+        <property name="text">
+         <string>Max N</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="l_minN">
+        <property name="text">
+         <string>Min N</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1" colspan="2">
+       <widget class="QSpinBox" name="sb_MaxN_sub1">
+        <property name="maximum">
+         <number>999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="l_pt0">
+        <property name="text">
+         <string>pt0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="l_alpha_sub1">
+        <property name="text">
+         <string>Alpha</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QDoubleSpinBox" name="dsb_alpha_sub1">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QDoubleSpinBox" name="dsp_pt0">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.700000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="dsp_pc0">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.600000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="l_pc1">
+        <property name="text">
+         <string>pc1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QDoubleSpinBox" name="dsp_pc1">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.800000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="l_pc0">
+        <property name="text">
+         <string>pc0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="l_beta_sub1">
+        <property name="text">
+         <string>Beta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QDoubleSpinBox" name="dsp_pt1">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.900000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="l_pt1">
+        <property name="text">
+         <string>pt1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QDoubleSpinBox" name="dsb_beta_sub1">
+        <property name="maximum">
+         <double>0.990000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+        <property name="value">
+         <double>0.100000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" rowspan="6">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>Calculation Featers</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_12">
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="cb_skipR">
+           <property name="text">
+            <string>Skip R</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="cB_skipS">
+           <property name="text">
+            <string>Skip S</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="cb_skipN1">
+           <property name="text">
+            <string>Skip N1</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QPushButton" name="b_CalcMaxN">
+     <property name="text">
+      <string>Aproximate max N</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QPushButton" name="pB_StartCalc">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Start calculation</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0" colspan="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>140</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Choose Design</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="rB_simon">
+        <property name="text">
+         <string>Simon’s Design</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rB_sub1">
+        <property name="text">
+         <string>Sub1 Design</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
