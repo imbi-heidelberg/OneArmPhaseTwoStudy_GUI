@@ -240,7 +240,7 @@ QDataStream & operator <<(QDataStream &dataStream, const Result &result)
         dataStream << result.cut;
 
         // Write the number of curtailment results to file (used in the deserialization process).
-        dataStream << result.curtailmentResults->size();
+        dataStream << (unsigned int)(result.curtailmentResults->size());
         std::map<int, Result::Curtailment>::iterator it;
         for(it = result.curtailmentResults->begin(); it != result.curtailmentResults->end(); it++)
         {
@@ -260,7 +260,7 @@ QDataStream & operator <<(QDataStream &dataStream, const Result &result)
             dataStream << tmp.type2_errorRate;
 
             // Write the number of stopping rules to file (used in the deserialization process).
-            dataStream << tmp.stoppingRulesNSC->size();
+            dataStream << (unsigned int)(tmp.stoppingRulesNSC->size());
             for(unsigned int i = 0; i < tmp.stoppingRulesNSC->size(); i++)
             {
                 dataStream << tmp.stoppingRulesNSC->at(i)[0];
@@ -282,7 +282,7 @@ QDataStream & operator <<(QDataStream &dataStream, const Result &result)
         dataStream << tmpFlexSol;
 
         // Needed for deserialization
-        size_t flexSize = result.flexibleAdaptionEqua->size();
+        unsigned int flexSize = (unsigned int)(result.flexibleAdaptionEqua->size());
         dataStream << flexSize;
 
         for(it_prop = result.flexibleAdaptionProp->begin(); it_prop != result.flexibleAdaptionProp->end(); it_prop++)
@@ -339,7 +339,7 @@ QDataStream & operator >>(QDataStream &dataStream, Result &result)
     {
         dataStream >> result.cut;
 
-        size_t curtailCount;
+        unsigned int curtailCount;
         dataStream >> curtailCount;
 
         for(size_t i=0; i < curtailCount; i++)
@@ -359,7 +359,7 @@ QDataStream & operator >>(QDataStream &dataStream, Result &result)
             dataStream >> curt.type1_errorRate;
             dataStream >> curt.type2_errorRate;
 
-            size_t stoppingRulesCount;
+            unsigned int stoppingRulesCount;
             dataStream >> stoppingRulesCount;
             curt.stoppingRulesNSC = new std::vector<float*>();
             for(unsigned int i = 0; i < stoppingRulesCount; i++)
@@ -379,7 +379,7 @@ QDataStream & operator >>(QDataStream &dataStream, Result &result)
     dataStream >> result.useFlexible;
     if(result.useFlexible)
     {
-        size_t flexSize;
+        unsigned int flexSize;
         size_t i;
         int tmp_k;
         double tmp_ce;
