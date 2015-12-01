@@ -1,0 +1,26 @@
+In order to compile the "OneArmPhaseTwoStudy_GUI" you will need to follow the 
+steps given below:
+
+1. Install R on your operating system following the instructions given on 
+   "https://cran.r-project.org/".
+   1.1 After installation run R and install the packages "RInside" and
+       "OneArmPhaseTwoStudy" by issuing the commands:
+       - install.packages("RInside")
+       - install.packages("oneArmPhaseTwoStudy")
+
+2. Install Qt version 4.8.x on your operating system following the instructions 
+   given on "https://www.qt.io/".
+   	- It is important that the libraries provided by Qt are build with the 
+   	  same compiler which were used to compile R. This ensures that 
+   	  libraries from R and Qt can be linked together.  
+   	  
+3. After installation of these requirements you should be able to switch to the 
+   "source"-folder, open a terminal and issue the following commands:
+   	- qmake "OneArmPhaseTwoStudy_GUI.pro"
+   	- make
+   	
+After execution of "make" you should obtain an executable named 
+"OneArmPhaseTwoStudy_GUI" which implements the GUI for the "OneArmPhaseTwoStudy"
+R-package.
+
+   
