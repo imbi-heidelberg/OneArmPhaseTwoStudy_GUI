@@ -66,8 +66,15 @@ RLAPACK = 		$$system($$R_HOME/bin/R CMD config LAPACK_LIBS)
 #RRPATH =		-Wl,-rpath,$$R_HOME/lib
 
 ## include headers and libraries for Rcpp interface classes
+win32{
 RCPPINCL = 		$$system($$R_HOME/bin/Rscript -e Rcpp:::CxxFlags())
 RCPPLIBS = 		$$system($$R_HOME/bin/Rscript -e Rcpp:::LdFlags())
+}
+unix {
+RCPPINCL = 		$$system($$R_HOME/bin/Rscript -e Rcpp:::CxxFlags\\(\\))
+RCPPLIBS = 		$$system($$R_HOME/bin/Rscript -e Rcpp:::LdFlags\\(\\))
+}
+
 
 ## for some reason when building with Qt we get this each time
 ##   /usr/local/lib/R/site-library/Rcpp/include/Rcpp/module/Module_generated_ctor_signature.h:25: warning: unused parameter ‘classname
@@ -76,8 +83,15 @@ RCPPLIBS = 		$$system($$R_HOME/bin/Rscript -e Rcpp:::LdFlags())
 #RCPPWARNING =		-Wno-unused-parameter
 
 ## include headers and libraries for RInside embedding classes
+win32{
 RINSIDEINCL = 		$$system($$R_HOME/bin/Rscript -e RInside:::CxxFlags())
 RINSIDELIBS = 		$$system($$R_HOME/bin/Rscript -e RInside:::LdFlags())
+}
+unix{
+RINSIDEINCL = 		$$system($$R_HOME/bin/Rscript -e RInside:::CxxFlags\\(\\))
+RINSIDELIBS = 		$$system($$R_HOME/bin/Rscript -e RInside:::LdFlags\\(\\))
+}
+
 
 ## compiler etc settings used in default make rules
 QMAKE_CXXFLAGS +=	$$RCPPWARNING $$RCPPFLAGS $$RCPPINCL $$RINSIDEINCL

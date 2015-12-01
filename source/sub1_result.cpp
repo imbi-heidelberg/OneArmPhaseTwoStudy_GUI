@@ -296,7 +296,7 @@ QDataStream & operator <<(QDataStream &dataStream, const Sub1_result &result)
         dataStream << result.cut;
 
         // Write the number of curtailment results to file (used in the deserialization process).
-        dataStream << result.curtailmentResults->size();
+        dataStream << (unsigned int)(result.curtailmentResults->size());
         std::map<int, Sub1_result::Curtailment_SubD1>::iterator it;
         for(it = result.curtailmentResults->begin(); it != result.curtailmentResults->end(); it++)
         {
@@ -308,7 +308,7 @@ QDataStream & operator <<(QDataStream &dataStream, const Sub1_result &result)
             dataStream << tmp.type2_errorRate;
 
             // Write the number of stopping rules to file (used in the deserialization process).
-            dataStream << tmp.stoppingRulesNSC->size();
+            dataStream << (unsigned int)(tmp.stoppingRulesNSC->size());
             Sub1_result::StoppingRule_SubD1 sr ;
             for(unsigned int i = 0; i < tmp.stoppingRulesNSC->size(); i++)
             {
@@ -373,7 +373,7 @@ QDataStream & operator >>(QDataStream &dataStream, Sub1_result &result)
         dataStream >> tmp;
         result.setCut(tmp);
 
-        size_t curtailCount;
+        unsigned int curtailCount;
         dataStream >> curtailCount;
 
         for(size_t i=0; i < curtailCount; i++)
@@ -385,7 +385,7 @@ QDataStream & operator >>(QDataStream &dataStream, Sub1_result &result)
             dataStream >> curt.type1_errorRate;
             dataStream >> curt.type2_errorRate;
 
-            size_t stoppingRulesCount;
+            unsigned int stoppingRulesCount;
             dataStream >> stoppingRulesCount;
             curt.stoppingRulesNSC = new std::vector<Sub1_result::StoppingRule_SubD1>();
             for(unsigned int i = 0; i < stoppingRulesCount; i++)
