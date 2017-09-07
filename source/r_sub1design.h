@@ -45,9 +45,9 @@ public:
     // skipR: If true skips the iteration over "r" at certian points to improve calculation speed (finds less designs).
     // skipN1: If true skips the iteration over "n1" at certian points to improve calculation speed
     //         (finds less designs and it is impossible to determine the optimalization criteria of the found designs).
-    // lowerBoader: Sets a minimal value for "n" (number of patients to be recruited).
-    // upperBoader: Sets a maximal value for "n" (number of patients to be recruited).
-    void calculateStudySolutions(bool skipS, bool skipR, bool skipN1, int lowerBoader, int upperBoader);
+    // lowerBorder: Sets a minimal value for "n" (number of patients to be recruited).
+    // upperBorder: Sets a maximal value for "n" (number of patients to be recruited).
+    void calculateStudySolutions(bool skipS, bool skipR, bool skipN1, int lowerBorder, int upperBorder);
     // Returns the number of identified designs (after "calculateStudySolutions" was invoked).
     int getNumberOfResults();
     // Estimates the effect of (non-)stochastic curtailment for the "subset" design with the ID "resID".

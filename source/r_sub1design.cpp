@@ -51,7 +51,7 @@ R_Sub1Design::~R_Sub1Design()
     delete allResults;
 }
 
-void R_Sub1Design::calculateStudySolutions(bool skipS, bool skipR, bool skipN1, int lowerBoader, int upperBoader)
+void R_Sub1Design::calculateStudySolutions(bool skipS, bool skipR, bool skipN1, int lowerBorder, int upperBorder)
 {
     if(!packageLoaded) // load "OneArmPhaseTwo"-package if not allready loaded
         this->loadPackage();
@@ -66,7 +66,7 @@ void R_Sub1Design::calculateStudySolutions(bool skipS, bool skipR, bool skipN1, 
         //ts << SUB1_OBJECT << "$setMaxN(" << this->maxn << "); \n";
 
         ts << SOLNAME_SUB1 << "<- getSolutionsSub1(sub1 = " << SUB1_OBJECT << ", skipS = " << (skipS ? "T":"F") << ", skipR = " << (skipR ? "T":"F") << ", skipN1 = " << (skipN1 ? "T":"F")
-           << ", lowerBoader = " << lowerBoader << ", upperBoader = " << upperBoader << ", useCurtailment = F, curtailAll = F)";
+           << ", lowerBorder = " << lowerBorder << ", upperBorder = " << upperBorder << ", useCurtailment = F, curtailAll = F)";
         qDebug() << calculationCode;
         R.parseEvalQ(calculationCode.toStdString());
         // Get number of found designs and read them back to c++.
